@@ -270,8 +270,8 @@ var vm = new Vue({
                 vm.form.email.value = "";
                 vm.form.login_code.value = "";
                 vm.form.username.value = "";
-                // vm.form.password.value = "";
-                // vm.form.conf_password.value = "";
+                vm.form.password.value = "";
+                vm.form.conf_password.value = "";
                 Swal.fire({
                     icon: 'success',
                     title: 'Utilisateur enregistré',
