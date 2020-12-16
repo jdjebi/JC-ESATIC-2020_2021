@@ -94,7 +94,7 @@
         </div>
 
         <div class="">
-          <span class="text-dark">Déjà un compte ?</span> <a href="{{ route("login") }}">Connectez vous</a>.
+          <span class="text-dark">Déjà un compte ?</span> <a href="{{ route("app.login") }}">Connectez vous</a>.
         </div>
 
         <div class="row mt-3">

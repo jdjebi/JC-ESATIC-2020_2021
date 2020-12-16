@@ -17,7 +17,7 @@ class AuthOnly
     public function handle($request, Closure $next)
     {
 
-        $redirect_url = route("login")."?redirect=".  url()->full();
+        $redirect_url = route("app.login")."?redirect=".  url()->full();
 
         if(!Auth::check()){
           \Flash::add("Vous devez être connecté pour avoir accès à la page demandée.","warning");

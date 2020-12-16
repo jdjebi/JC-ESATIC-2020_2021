@@ -8,7 +8,7 @@ if(!isset($_SERVER["HEROKU_APP_DIR"])){
     "host" => "localhost",
     "username" => "root",
     "password" => "",
-    "dbname" => "youniti"
+    "dbname" => "itweb"
   ];
 
 }else{

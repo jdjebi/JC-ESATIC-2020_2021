@@ -57,7 +57,7 @@ body{
             </p>
         </div>
         <div class="text-right">
-            <a class="btn btn-primary" href="{{ route("login") }}">Continuer</a>
+            <a class="btn btn-primary" href="{{ route("app.login") }}">Continuer</a>
         </div>
     </div>
 </div>
