@@ -5,7 +5,7 @@
     <style>
         .code-item{
             width: 170px;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
             font-weight: 600
         }
