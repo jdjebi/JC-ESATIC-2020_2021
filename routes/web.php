@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UI\Web\Index\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::get('/', function () {
 
 Route::middleware("guest")->group(function(){
 
-    Route::get('','UI\Web\Index\IndexController@index')->name('app.index');
+    Route::get('',[IndexController::class,'index'])->name('app.index');
     Route::get('connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login');
     Route::get('inscription','UI\Web\Auth\AuthController@culture_register')->name('app.register');
     
