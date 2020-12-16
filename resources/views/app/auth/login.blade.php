@@ -52,7 +52,7 @@
             </div>
           </button>
           <div class="text-center mt-3 small">
-          <a href="{{ route("app.register") }}">Créer un compte</a> &middot <a href="{{ route("app.reset.email") }}">Mot de passe oublié</a>
+          <a href="{{ route("app.register") }}">Créer un compte</a>
           </div>
         </div>
       </form>
