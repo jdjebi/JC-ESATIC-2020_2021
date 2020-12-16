@@ -1,0 +1,19 @@
+.post-tool-link:hover{
+    text-decoration: none;
+}
+.post-tool{
+    margin-bottom: 20px
+}
+.post-tool:hover{
+    box-shadow: 1px 1px 1px 1px #f1efef;
+}
+.post-tool.unable{
+    background: #f1f1f1 !important;
+}
+.post-tool.unable h5{
+    color: gray
+}
+.post-tool.unable:hover{
+    box-shadow: none;
+    cursor: default;
+}

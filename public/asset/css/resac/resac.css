@@ -1,0 +1,136 @@
+/* Utilitaire de dimension */
+
+.wh-40{
+  width: 40px;
+  height: 40px;
+}
+
+.resac-w-20{
+  width: 20px
+}
+
+.resac-w-200{
+  width: 200px
+}
+.resac-h-200{
+  height: 200px
+}
+
+.resac-w-150{
+  width: 150px
+}
+.resac-h-150{
+  height: 150px
+}
+
+.resac-w-100{
+  width: 100px
+}
+
+/* Utilitaire de marge */
+
+.resac-padding-no-left-right{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 768px){
+  .resac-padding-left-right-on-sm{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Utilitaire de bordure */
+
+.resac-border-light-2{
+  border: 1px solid #ced2d7
+}
+.resac-border-no{
+  border: 0;
+}
+.resac-rounded-2px{
+  border-radius: 2px;
+}
+
+@media (max-width: 768px){
+  .resac-padding-left-right-on-sm{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+ 
+  .resac-feed .resac-clear-rounded-on-sm{
+    border-radius: 0 !important;
+  }
+
+  .resac-feed .resac-clear-border-left-on-sm{
+    border-left: none !important;
+  }
+
+  .resac-feed .resac-clear-border-right-on-sm{
+    border-right: none !important;
+  }
+}
+
+/* Utilitaire d'affichage */
+
+.resac-d-none{
+  display:none
+}
+
+@media (max-width: 768px){
+  .resac-d-sm-none{
+    display:none
+  }
+}
+
+@media (max-width: 960px){
+  .resac-d-lg-block{
+    display: block
+  }
+  .resac-d-lg-none{
+    display:none
+  }
+}
+
+/* Utilitaire d'ombre */
+
+.resac-linkedin-shadow{
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+}
+
+/* Support */
+
+.resac-account-card-support{
+    border: none
+}
+.resac-account-card-support .card-header{
+    background-color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 0;
+    padding-top: 0
+}
+.resac-account-card-support .card-body{
+    padding-left: 0;
+}
+.resac-account-card-support label{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.resac-account-card-support .form-control {
+    max-width: 100%;
+    background-color: #fafbfc;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292e;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: inset 0 1px 0 rgba(225,228,232,.2);
+}

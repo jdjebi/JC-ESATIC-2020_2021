@@ -1,0 +1,89 @@
+.post-box .box{
+  border-radius: 2px;
+  position: relative;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.post-box .header-post-message{
+  font-weight: 500
+}
+
+.pub-box .box{
+  border-radius: 2px;
+}
+
+.pub-box .pub-user-photo{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%
+}
+
+.pub-box .pub-user-name{
+  font-size: 14px;
+  font-weight: 500
+}
+
+.pub-box .dropdown-toggle::after {
+    display: none;
+}
+
+.bg-post .post-box .box{
+  border-radius: 0.25em;
+  position: relative;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+
+.bg-post .post-box .header-post-message{
+  font-weight: 500
+}
+
+.bg-post .pub-box .box{
+  border-radius: 0.25em;
+}
+
+.bg-post .pub-box .pub-user-photo{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%
+}
+
+.bg-post .pub-box .pub-user-name{
+  font-size: 14px;
+  font-weight: 500
+}
+
+.bg-post .pub-box .dropdown-toggle::after {
+    display: none;
+}
+
+
+/* Publications */
+
+.pub-box .body{
+  white-space: pre-line;
+  font-size: 16px;
+  overflow-wrap: break-word;
+}
+
+.resac-post-link{
+  font-weight: 500;
+  color: #4599ff;
+}
+
+.resac-post-hashtag{
+  color: #4599ff;
+}
+
+
+
+/* Badge de publication */
+
+.post-badge.post-badge-info{
+  background: #2196F3;
+  font-size: 8px;
+  padding: 2px 9px 2px 9px;
+  color: #fff;
+  font-weight: 500;
+}
