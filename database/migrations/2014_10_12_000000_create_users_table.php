@@ -15,10 +15,34 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('username')->nullable()->unique();
+            $table->string('nom')->nullable();
+            $table->string('prenom')->nullable();
+            $table->string('email')->nullable();
+            $table->string('pays')->nullable();
+            $table->string('numero')->nullable();
             $table->string('password');
+            $table->boolean('active')->default(false);
+            $table->timestamp('date_inscription')->nullable();
+            $table->string('ville')->nullable();
+            $table->string('commune')->nullable();
+            $table->string('promo1')->nullable();
+            $table->string('promo2')->nullable();
+            $table->string('emploi')->nullable();
+            $table->string('universite')->nullable();
+            $table->boolean('is_staff')->default(false);
+            $table->string('staff_role')->default("member");
+            $table->unsignedInteger('version')->default(3);
+            $table->string('photo')->nullable(); 
+
+            $table->boolean('is_superadmin')->default(false); // Version 6
+
+            $table->string('login_code')->nullable()->unique();
+            $table->boolean('login_code_used')->default(false);
+            $table->boolean('is_student')->default(false);
+            $table->string('user_type')->default("etudiant");
+
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
