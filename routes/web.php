@@ -5,9 +5,11 @@ use App\Http\Controllers\IndexController;
 
 Route::middleware("guest")->group(function(){
 
-    Route::get('connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login');
+    Route::get('',[IndexController::class,'index'])->name('app.index');
 
     Route::get('inscription','UI\Web\Auth\AuthController@culture_register')->name('app.register');
+
+    Route::any('connexion','UI\Web\Auth\AuthController@culture_login2')->name('app.login');
 
     Route::get('demo','UI\Web\Index\IndexController@index2')->name('home');
 
@@ -26,11 +28,14 @@ Route::middleware("auth")->group(function(){
       Route::post('general2','Backend\User\Update\GeneralController@jc_update')->name('backend.compte.general2');
     });
 
+    // Backend
+      Route::post('voter','Backend\Vote\VoteController@voter')->name('backend.votes.create');
+
 });
 
 /* Administration */
 
-Route::get('connexion','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
+Route::get('admin/connexion','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
 
 Route::middleware('admin.login')->group(function (){
 
@@ -107,7 +112,5 @@ Route::get('/deconnexion','Backend\Auth\AuthController@logout')->name('logout');
 Route::get('deconnexion2','Backend\Auth\AuthController@admin_logout')->name('admin.logout');
 Route::post('backend/roles/update/','Backend\Role\RoleController@update_jc_role')->name('backend.admin.roles.update');
 Route::get('@admin/connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login2');
-Route::any('connexion','UI\Web\Auth\AuthController@culture_login2')->name('app.login');
 
 Route::get('connexion3','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
-Route::get('',[IndexController::class,'index'])->name('app.index');
