@@ -11,9 +11,18 @@
     </div>
     <div class="contact-form">
       <div class="input-fields">
-        <input type="text" class="input" placeholder="Code de connexion" required>
-        <br> <br>
-        <button type="submit" class="btn">Connexion</button>
+        <form action="" method="POST">
+            <input type="text" class="input" name="login_code" placeholder="Code de connexion" required>
+            <div style="color: red">
+                @isset($error_message)
+                    {{ $error_message }}
+                @endisset
+            </div>
+            <br> <br>
+            <center>
+                <button type="submit" class="btn">Connexion</button>
+            </center>
+        </form>
       </div>
     </div>
   </div>

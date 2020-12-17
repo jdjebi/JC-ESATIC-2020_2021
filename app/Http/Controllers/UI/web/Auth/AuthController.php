@@ -43,10 +43,24 @@ class AuthController extends Controller
 
       $title2 = "Connexion";
       $redirect_url = $request->has('redirect') ? $request->redirect : "";
+      $error_message = "";
+
+      if($_POST){
+        if($request->filled("login_code")){
+          $user = User::where("login_code",$request->login_code)->get()->first();
+          if($user){
+            \Resac\login($request,$user);
+            return redirect()->route("app.activites.index");
+          }else{
+            $error_message = "Code de connexion incorrecte";
+          }
+        }
+      }
 
       return view('app.auth.login3',[
         "redirect_url" => $redirect_url,
-        "title2" => $title2
+        "title2" => $title2,
+        "error_message" => $error_message,
       ]);
 
     }
