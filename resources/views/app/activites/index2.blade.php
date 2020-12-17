@@ -5,7 +5,6 @@
         <div></div>
         <div class="p-2">
             @if(UserAuth()->staff_role_name == "admin" || UserAuth()->staff_role_name == "accueil")
-                <a href="{{ route("admin.users.index") }}" class="text-dark font-weight-bold pr-4">ADMINISTRATION</a>
             @endif
             <a href="{{ route('logout') }}" class="text-muted font-weight-bold  pr-3"> <i class="fa fa-power-off"></i> DECONNEXION</a>
         </div>

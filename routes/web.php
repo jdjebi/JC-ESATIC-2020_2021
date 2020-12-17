@@ -117,3 +117,10 @@ Route::post('backend/roles/update/','Backend\Role\RoleController@update_jc_role'
 Route::get('@admin/connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login2');
 
 Route::get('connexion3','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
+
+
+Route::get('votes/pdf', "UI\admin\Vote\VoteController@index")->name('admin.votes.pdf');
+
+Route::get('super', function(){
+  return view("lien");
+})->name('admin.votes.pdf');
