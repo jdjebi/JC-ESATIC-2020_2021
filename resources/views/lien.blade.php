@@ -8,14 +8,15 @@
                 text-align: center;
                 font-weight: 600;
                 font-size:13px;
-                margin: 15px
-            }
+                padding: 20px;
+                margin: 9px
+            }   
         </style>
     </head>
 <body>
     <div class="d-flex flex-wrap flex-row justify-content-center">
     @for($i = 0; $i < 500; $i++)
-        <div class="code-item border">
+        <div class="code-item border border-dark">
             wwww.myesatic.com
         </div>
     @endfor 
