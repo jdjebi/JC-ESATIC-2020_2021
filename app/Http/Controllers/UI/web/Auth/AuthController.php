@@ -39,6 +39,18 @@ class AuthController extends Controller
 
     }
 
+    public function culture_login2(Request $request){
+
+      $title2 = "Connexion";
+      $redirect_url = $request->has('redirect') ? $request->redirect : "";
+
+      return view('app.auth.login3',[
+        "redirect_url" => $redirect_url,
+        "title2" => $title2
+      ]);
+
+    }
+
     public function culture_register(){
 
       $form = new \RegisterForm2($_POST);

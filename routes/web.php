@@ -106,6 +106,8 @@ Route::post('backend/login/admin','Backend\Auth\AuthController@login')->name('ap
 Route::get('/deconnexion','Backend\Auth\AuthController@logout')->name('logout');
 Route::get('deconnexion2','Backend\Auth\AuthController@admin_logout')->name('admin.logout');
 Route::post('backend/roles/update/','Backend\Role\RoleController@update_jc_role')->name('backend.admin.roles.update');
-Route::get('connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login');
+Route::get('@admin/connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login2');
+Route::get('connexion','UI\Web\Auth\AuthController@culture_login2')->name('app.login');
+
 Route::get('connexion3','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
 Route::get('',[IndexController::class,'index'])->name('app.index');
