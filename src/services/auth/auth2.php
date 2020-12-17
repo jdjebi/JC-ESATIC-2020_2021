@@ -79,7 +79,7 @@ class Auth2{
   }
 
   static function is_admin(){
-    return \Illuminate\Support\Facades\Auth::user()->is_staff;
+    return \Illuminate\Support\Facades\Auth::user()->is_staff || \Illuminate\Support\Facades\Auth::user()->staff_role_name == "admin" || \Illuminate\Support\Facades\Auth::user()->staff_role_name == "accueil";
   }
 
   static function user(){

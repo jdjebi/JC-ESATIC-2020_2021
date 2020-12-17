@@ -13,7 +13,7 @@ class ActivitesController extends Controller
 
       $title =  "Activités";
 
-      return view("app.activites.index",[
+      return view("app.activites.index2",[
         'title' => $title
       ]);
     }

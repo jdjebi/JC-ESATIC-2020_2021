@@ -34,28 +34,28 @@ Route::get('connexion','UI\admin\Auth\AuthController@login')->name('admin')->mid
 
 Route::middleware('admin.login')->group(function (){
 
-  Route::namespace("UI\admin")->group(function (){
-    Route::get('','AdminController@index')->name('admin_index');
-    Route::get('users','User\UserController@index')->name('admin.users.index');
-    Route::get('user/action/','AdminController@delete_user')->name('admin_delete_user');
-    Route::get('users/{id}','User\UserController@show')->where('id', '[0-9]+')->name('admin_user_profil');
-    Route::get('users/{id}/compte','User\UserController@account')->where('id', '[0-9]+')->name('admin.users.account');
-    Route::get('roles-permissions/','User\RolesAndPermissionsController@index')->name('admin.user.roles');
-    Route::get('roles-permissions/roles/{id}/','User\RolesAndPermissionsController@show')->where('id', '[0-9]+')->name('admin.roles.show');
-  });
-
-  Route::get('deconnexion','Backend\Auth\AuthController@admin_logout')->name('admin.logout');
-
-  Route::namespace("Resac")->group(function (){
-    Route::get('rechercher',"SearchController@admin")->name('admin_search');
-  });
-
 });
 
 
 Route::middleware('admin.login')->group(function (){ 
 
     Route::prefix('admin/')->group(function () {
+
+      Route::get('','UI\admin\User\UserController@index')->name('admin_index');
+      Route::get('users','UI\admin\User\UserController@index')->name('admin.users.index');
+      Route::get('user/action/','UI\admin\AdminController@delete_user')->name('admin_delete_user');
+      Route::get('users/{id}','UI\admin\User\UserController@show')->where('id', '[0-9]+')->name('admin_user_profil');
+      Route::get('users/{id}/compte','UI\admin\User\UserController@account')->where('id', '[0-9]+')->name('admin.users.account');
+      Route::get('roles-permissions/','UI\admin\User\RolesAndPermissionsController@index')->name('admin.user.roles');
+      Route::get('roles-permissions/roles/{id}/','UI\admin\User\RolesAndPermissionsController@show')->where('id', '[0-9]+')->name('admin.roles.show');
+  
+      Route::get('deconnexion','Backend\Auth\AuthController@admin_logout')->name('admin.logout');
+    
+      Route::namespace("Resac")->group(function (){
+        Route::get('rechercher',"SearchController@admin")->name('admin_search');
+      });
+
+
         Route::get('users/create','UI\admin\User\CreateUserController')->name('admin.users.create');
         Route::post('backend/users/create','Backend\User\Create\AdminCreateUserController@create')->name('backend.admin.users.create');
         Route::get('codes/','UI\admin\Code\CodeController@index')->name('admin.codes.index');
