@@ -14,6 +14,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
+        "spatie/flysystem-dropbox": "^1.2",
         "spatie/laravel-permission": "^3.18"
     },
     "require-dev": {
