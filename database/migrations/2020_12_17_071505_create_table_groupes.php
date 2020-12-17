@@ -16,6 +16,7 @@ class CreateTableGroupes extends Migration
         Schema::create('groupes', function (Blueprint $table) {
             $table->id();
             $table->string("titre");
+            $table->string("promo")->nullable();
             $table->string("photo")->nullable();
             $table->string("desc")->nullable();
             $table->string("json")->nullable();
