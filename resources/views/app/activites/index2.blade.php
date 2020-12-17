@@ -10,6 +10,7 @@
             <a href="{{ route('logout') }}" class="text-muted font-weight-bold  pr-3"> <i class="fa fa-power-off"></i> DECONNEXION</a>
         </div>
     </div>
+    @if($vote_status)
     <div id="v-app" class="container">
         <div id="groupes" class="d-none">
             <div v-if="vote_already_done">
@@ -65,6 +66,9 @@
             </div>
         </div>
     </div>
+    @else
+        <h4 class="text-center mt-5 text-muted">Vote indisponible</h4>
+    @endif
 @endsection
 
 @section('scripts')

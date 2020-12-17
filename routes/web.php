@@ -60,14 +60,17 @@ Route::middleware('admin.login')->group(function (){
         Route::get('rechercher',"SearchController@admin")->name('admin_search');
       });
 
+      Route::get('users/create','UI\admin\User\CreateUserController')->name('admin.users.create');
+      Route::post('backend/users/create','Backend\User\Create\AdminCreateUserController@create')->name('backend.admin.users.create');
+      Route::get('codes/','UI\admin\Code\CodeController@index')->name('admin.codes.index');
+      Route::get('codes/generate','UI\admin\Code\CodeController@generate')->name('admin.codes.generate');
+      Route::get('codes/verifications','UI\admin\Code\CodeController@verif')->name('admin.codes.verif');
+      Route::get('codes/pdf','UI\admin\Code\CodeController@pdf')->name('admin.codes.pdf');
+      Route::post('backend/codes/','Backend\Code\ApiCodeController@get')->name('backend.admin.codes.verif');
 
-        Route::get('users/create','UI\admin\User\CreateUserController')->name('admin.users.create');
-        Route::post('backend/users/create','Backend\User\Create\AdminCreateUserController@create')->name('backend.admin.users.create');
-        Route::get('codes/','UI\admin\Code\CodeController@index')->name('admin.codes.index');
-        Route::get('codes/generate','UI\admin\Code\CodeController@generate')->name('admin.codes.generate');
-        Route::get('codes/verifications','UI\admin\Code\CodeController@verif')->name('admin.codes.verif');
-        Route::get('codes/pdf','UI\admin\Code\CodeController@pdf')->name('admin.codes.pdf');
-        Route::post('backend/codes/','Backend\Code\ApiCodeController@get')->name('backend.admin.codes.verif');
+      Route::get('votes',"UI\admin\Vote\VoteController@index")->name('admin.votes.index');
+      Route::get('votes/toggle',"UI\admin\Vote\VoteController@toggle")->name('admin.votes.toggle');
+      Route::get('votes/pdf', "UI\admin\Vote\VoteController@index")->name('admin.votes.pdf');
     });
 
 });

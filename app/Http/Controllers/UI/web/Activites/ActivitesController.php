@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Activite;
 use App\Models\Groupe;
 use App\Models\Vote;
-
+use App\Models\VoteControl;
 
 
 class ActivitesController extends Controller
@@ -33,7 +33,8 @@ class ActivitesController extends Controller
         'title' => $title,
         'groupes' => $groupes,
         'groupe_vote' => $groupe_vote,
-        'vote_already_done' => $vote_already_done
+        'vote_already_done' => $vote_already_done,
+        "vote_status" => VoteControl::status()
       ]);
     }
 

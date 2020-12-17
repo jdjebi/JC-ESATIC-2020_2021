@@ -15,6 +15,19 @@
     <hr>
 
     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+      <span>VOTES</span>
+    </h6>
+    <ul class="nav flex-column mb-2">
+      <li class="nav-item">
+        <a class="nav-link {{ is_current_url('admin.votes.index') }}" href="{{ route('admin.votes.index') }}">
+          Panneau de control
+        </a>
+      </li>
+    </ul>
+
+    <hr>
+
+    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
       <span>CODES ET COMPTES</span>
     </h6>
     <ul class="nav flex-column mb-2">
