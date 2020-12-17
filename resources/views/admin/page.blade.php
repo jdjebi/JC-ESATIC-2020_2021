@@ -29,7 +29,7 @@
     @yield('extras_style')
   </head>
   <body>
-    @include('admin.nav')
+    @include('admin.nav2')
     @yield('content')
     <script src="{{ asset('asset/js/jquery-3.4.1.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('asset/js/bootstrap.min.js') }}" type="text/javascript"></script>

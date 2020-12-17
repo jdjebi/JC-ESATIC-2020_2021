@@ -5,14 +5,14 @@ use App\Http\Controllers\IndexController;
 
 Route::middleware("guest")->group(function(){
 
-    Route::get('/',[IndexController::class,'index'])->name('app.index');
-
     Route::get('connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login');
 
     Route::get('inscription','UI\Web\Auth\AuthController@culture_register')->name('app.register');
 
+    Route::get('demo','UI\Web\Index\IndexController@index2')->name('home');
+
     // Backend
-    Route::post('/inscription','Backend\Auth\AuthController@register')->name('backend.register.member');
+    Route::post('backend/inscription','Backend\Auth\AuthController@register')->name('backend.register.member');
 
 });
 
@@ -108,3 +108,4 @@ Route::get('deconnexion2','Backend\Auth\AuthController@admin_logout')->name('adm
 Route::post('backend/roles/update/','Backend\Role\RoleController@update_jc_role')->name('backend.admin.roles.update');
 Route::get('connexion','UI\Web\Auth\AuthController@culture_login')->name('app.login');
 Route::get('connexion3','UI\admin\Auth\AuthController@login')->name('admin')->middleware('admin.guest');
+Route::get('',[IndexController::class,'index'])->name('app.index');
