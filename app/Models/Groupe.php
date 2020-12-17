@@ -90,6 +90,9 @@ class Groupe extends Model
             }
         }
 
+        if($t == 0)
+            $t = 0;
+
         return $t;
     }
 
