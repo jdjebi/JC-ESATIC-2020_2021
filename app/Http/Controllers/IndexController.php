@@ -16,7 +16,7 @@ class IndexController extends Controller
     {
       $title2 = "Accueil";
       
-      return view('app.index.page2',[
+      return view('app.index.index3',[
         "title2" => $title2
       ]);
     }
