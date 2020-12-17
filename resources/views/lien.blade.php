@@ -9,7 +9,7 @@
                 font-weight: 600;
                 font-size:13px;
                 padding: 20px;
-                margin: 9px
+                margin: 5px
             }   
         </style>
     </head>
@@ -17,7 +17,7 @@
     <div class="d-flex flex-wrap flex-row justify-content-center">
     @for($i = 0; $i < 500; $i++)
         <div class="code-item border border-dark">
-            wwww.myesatic.com
+            www.myesatic.com  
         </div>
     @endfor 
 </div>
