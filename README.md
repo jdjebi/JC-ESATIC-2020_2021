@@ -10,7 +10,7 @@ La connexion se fait via le code de login et lors d'une connexion, utilisateur s
 - Vote
 - Connexion par code
 - Généreration de codes
-- Gestion des utilisateurss
+- Gestion des utilisateurs
 
 
 *Auteur: Jean-Marc Dje Bi, jeanmarcdjebi@gmail.com*
